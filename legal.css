@@ -1,0 +1,222 @@
+:root {
+  --bg-deep: #0a102e;
+  --bg-mid: #101832;
+  --bg-card: rgba(255, 255, 255, 0.07);
+  --border: rgba(255, 255, 255, 0.16);
+  --text: #e0e8ff;
+  --text-muted: rgba(224, 232, 255, 0.72);
+  --aqua: #59d9f2;
+  --aqua-soft: #8ce8fa;
+  --purple: #b89eeb;
+  --shadow: 0 24px 48px rgba(0, 0, 0, 0.35);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Yu Gothic UI", sans-serif;
+  line-height: 1.75;
+  color: var(--text);
+  background:
+    radial-gradient(ellipse 80% 50% at 50% -10%, rgba(89, 217, 242, 0.12), transparent),
+    radial-gradient(ellipse 60% 40% at 100% 100%, rgba(184, 158, 235, 0.1), transparent),
+    linear-gradient(160deg, var(--bg-deep) 0%, var(--bg-mid) 45%, #0c1430 100%);
+}
+
+.page {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 2rem 1.25rem 3rem;
+}
+
+.site-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.site-logo {
+  font-size: 1.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: var(--text);
+  margin: 0 0 0.35rem;
+}
+
+.site-tagline {
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+.site-nav {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1.25rem;
+}
+
+.site-nav a {
+  padding: 0.45rem 1rem;
+  border-radius: 999px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-decoration: none;
+  color: var(--text-muted);
+  border: 1px solid transparent;
+  transition: color 0.15s, border-color 0.15s, background 0.15s;
+}
+
+.site-nav a:hover {
+  color: var(--aqua-soft);
+  border-color: var(--border);
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.site-nav a.active {
+  color: var(--bg-deep);
+  background: linear-gradient(135deg, var(--aqua) 0%, var(--aqua-soft) 100%);
+  border-color: transparent;
+}
+
+.card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 1.75rem 1.5rem;
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.card h1 {
+  margin: 0 0 0.5rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.card h2 {
+  margin: 1.75rem 0 0.5rem;
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--aqua-soft);
+}
+
+.card h2:first-of-type {
+  margin-top: 1.25rem;
+}
+
+.card p,
+.card li {
+  color: var(--text-muted);
+  margin: 0.5rem 0;
+}
+
+.card ul {
+  padding-left: 1.25rem;
+}
+
+.card a {
+  color: var(--aqua);
+  text-decoration: none;
+}
+
+.card a:hover {
+  color: var(--aqua-soft);
+  text-decoration: underline;
+}
+
+.meta {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-bottom: 0.5rem;
+}
+
+.btn-primary {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.75rem 1.5rem;
+  border-radius: 999px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-decoration: none;
+  color: var(--bg-deep);
+  background: linear-gradient(135deg, var(--aqua) 0%, var(--aqua-soft) 100%);
+  box-shadow: 0 8px 24px rgba(89, 217, 242, 0.25);
+  transition: transform 0.15s, box-shadow 0.15s;
+}
+
+.btn-primary:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 12px 28px rgba(89, 217, 242, 0.35);
+  text-decoration: none;
+}
+
+.link-grid {
+  display: grid;
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+}
+
+.link-card {
+  display: block;
+  padding: 1rem 1.25rem;
+  border-radius: 14px;
+  border: 1px solid var(--border);
+  background: rgba(255, 255, 255, 0.04);
+  text-decoration: none;
+  color: var(--text);
+  transition: border-color 0.15s, background 0.15s;
+}
+
+.link-card:hover {
+  border-color: rgba(89, 217, 242, 0.4);
+  background: rgba(89, 217, 242, 0.08);
+  text-decoration: none;
+}
+
+.link-card strong {
+  display: block;
+  font-size: 1rem;
+  margin-bottom: 0.25rem;
+}
+
+.link-card span {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.site-footer {
+  margin-top: 2rem;
+  text-align: center;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+.site-footer a {
+  color: var(--aqua);
+  text-decoration: none;
+}
+
+.site-footer a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 480px) {
+  .page {
+    padding: 1.5rem 1rem 2.5rem;
+  }
+
+  .card {
+    padding: 1.25rem 1rem;
+  }
+
+  .site-logo {
+    font-size: 1.5rem;
+  }
+}
